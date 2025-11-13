@@ -16,4 +16,6 @@ A String object's behavior includes its methods, such as length, substring, toUp
    18 18
    7 9 14 18
 
-5. 
+5. The state of a Calculator object might include the number that has just been computed, as well as another number that is currently being input. A more complex Calculator object might also include a memory feature that stores an additional value. The behavior of a Calculator object might include methods to add, subtract, multiply, divide, and perhaps carryout other math operations (such as exponentiation, logarithms, and trigonometric functions like sine and cosine).
+
+6. 
