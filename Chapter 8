@@ -8,6 +8,12 @@ SELF CHECK PROBLEMS
 2. - An object is an entity that encapsulates data and behavior that operates on the data. 
    - A class is the blueprint for a type of object, specifying what data and behavior the object will have and how to construct it.
 
-3. The state of a String object is its sequence of characters (which are actually stored internally as an array of char values). A String object's behavior includes its methods, such as length, substring, toUpperCase, and indexOf.
+3.  The state of a String object is its sequence of characters (which are actually stored internally as an array of  char values). 
+A String object's behavior includes its methods, such as length, substring, toUpperCase, and indexOf.
 
-4. 
+4. 14 14
+   7 9 14 2
+   18 18
+   7 9 14 18
+
+5. 
