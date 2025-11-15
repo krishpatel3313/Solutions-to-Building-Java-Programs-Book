@@ -113,4 +113,7 @@ Objects provide abstraction by giving us more powerful pieces of data that have 
 Items declared private may be seen and used only from within their own classes. 
 Objects' fields should be declared private to provide encapsulation, so that external code can't make unwanted direct modifications to the fields' values.
 
-24. 
+24. To access private fields, create accessor methods that return their values. 
+For example, add a getName method to access the name field of an object.
+
+25. 
