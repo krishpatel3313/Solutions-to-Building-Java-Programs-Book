@@ -39,17 +39,11 @@ public void flip() {
 
 
 4. public boolean isVertical(Point other) {
-    if (other == null) {
-        throw new IllegalArgumentException("other must not be null");
-    }
     return this.x == other.x;
 }
 
 
 5. public double slope(Point other) {
-    if (other == null) {
-        throw new IllegalArgumentException("other is null");
-    }
     int dx = other.x - this.x;
     if (dx == 0) {
         throw new IllegalArgumentException("slope undefined for vertical line");
@@ -59,4 +53,43 @@ public void flip() {
 }
 
 
-6. 
+6. public boolean isCollinear(Point p1, Point p2) {
+int dx1 = p1.x - this.x;
+int dy1 = p1.y - this.y;
+int dx2 = p2.x - this.x;
+int dy2 = p2.y - this.y;
+    if (dx1 == 0 && dx2 == 0) 
+        return true;
+    if (dx1 == 0 || dx2 == 0) 
+        return false;
+    double s1 = (double) dy1 / dx1;
+    double s2 = (double) dy2 / dx2;
+    return round4(s1) == round4(s2);
+}
+private static double round4(double v) {
+    return Math.round(v * 10_000.0) / 10_000.0;
+}
+
+
+7. public void add(TimeSpan span) {
+    int total = this.hours * 60 + this.minutes
+              + span.hours * 60 + span.minutes;
+    this.hours = total / 60;
+    this.minutes = total % 60;
+}
+
+
+8. public void add(TimeSpan span) {
+    int total = this.hours * 60 + this.minutes
+              - (span.hours * 60 + span.minutes);
+if (total < 0) {
+    throw new IllegalArgumentException("result would be negative");
+}
+    this.hours = total / 60;
+    this.minutes = total % 60;
+}
+
+
+9. 
+
+9. 
